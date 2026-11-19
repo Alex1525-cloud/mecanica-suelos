@@ -370,6 +370,15 @@ ol.steps>li{margin:6px 0}
 .exchip.on{background:var(--sec);border-color:var(--sec)}
 .exchip.on b,.exchip.on small{color:#fff}
 .exb{display:none}.exb.on{display:block}
+.exlab{font:700 .74rem var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--sec-ink);margin:16px 0 0}
+.exnav{margin-top:6px}
+.exb>h2:first-of-type{margin-top:14px}
+.exintro{margin:10px 0 16px;border-radius:14px;overflow:hidden;border:1.5px solid color-mix(in srgb,var(--sec) 45%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--g1) 16%,var(--surface)),var(--surface))}
+.ei-row{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:9px 14px;border-top:1px solid color-mix(in srgb,var(--sec) 18%,var(--line))}
+.ei-row:first-child{border-top:0}
+.ei-k{font:700 .72rem var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:var(--sec-ink);padding-top:3px}
+.ei-res{font-weight:700;color:var(--sec-ink)}
+@media (max-width:480px){.ei-row{grid-template-columns:1fr;gap:2px}}
 .exfoot{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 6px}
 .exbtn{flex:1;min-width:150px;text-align:left;border:1.5px solid var(--sec);border-radius:12px;padding:10px 13px;background:var(--sec-soft);color:var(--ink);font:500 .9rem var(--f-body);cursor:pointer}
 .exbtn span{display:block;font-size:.72rem;color:var(--sec-ink);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
@@ -1602,26 +1611,14 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
 <section class="tab" id="budej" data-group="Libro de Budhu · Cap. 16" data-nav="Budhu cap. 16 · Ejemplos resueltos 16.1 a 16.8" data-tag="8 EJEMPLOS">
   <div class="eyebrow">Budhu, 3.ª ed. · Capítulo 16 · Ejemplos 16.1 a 16.8</div>
   <h1>Ejemplos resueltos de estabilidad de taludes</h1>
-  <p class="lead">Los ocho ejemplos del capítulo, resueltos con el mismo orden en cada paso: qué se busca, la fórmula, el reemplazo de valores y el resultado. Recalculé todos los números y coinciden con el libro. La teoría está en <a href="#budteo">Budhu cap. 16 · Teoría</a>.</p>
+  <p class="lead">Elige uno de los ocho ejemplos del capítulo. Cada uno está resuelto paso a paso y con todos los cálculos. La teoría está en <a href="#budteo">Budhu cap. 16 · Teoría</a>.</p>
 
-  <div class="tw"><table>
-    <tr><th>Ejemplo</th><th>Tema</th><th>Método</th><th>Resultado</th></tr>
-    <tr class="exrow" data-go="16.1"><td><b>16.1</b></td><td>Arena vertida desde un camión</td><td>Talud infinito (seco y con flujo)</td><td>30°, 24.8°, 30°, 14°</td></tr>
-    <tr class="exrow" data-go="16.2"><td><b>16.2</b></td><td>Zanja en una ladera de arcilla</td><td>Talud infinito, TSA (retroanálisis)</td><td>su = 17 kPa</td></tr>
-    <tr class="exrow" data-go="16.3"><td><b>16.3</b></td><td>Talud homogéneo de 8 m</td><td>Bishop simplificado (3 casos)</td><td>ESA 1.06 / 1.00 / 0.95</td></tr>
-    <tr class="exrow" data-go="16.4"><td><b>16.4</b></td><td>Talud con tres suelos</td><td>Bishop simplificado</td><td>ESA 1.01, TSA 1.91</td></tr>
-    <tr class="exrow" data-go="16.5"><td><b>16.5</b></td><td>Relleno granular sobre arcilla</td><td>Janbu (superficie no circular)</td><td>FS = 1.04</td></tr>
-    <tr class="exrow" data-go="16.6"><td><b>16.6</b></td><td>Arcilla sobre arcilla muy rígida</td><td>Ábaco de Taylor</td><td>FS = 1.94</td></tr>
-    <tr class="exrow" data-go="16.7"><td><b>16.7</b></td><td>Talud 3:1 con ru = 0.35</td><td>Bishop–Morgenstern</td><td>FS = 1.06</td></tr>
-    <tr class="exrow" data-go="16.8"><td><b>16.8</b></td><td>Talud de un lago con nivel variable</td><td>Programa de computadora (Bishop)</td><td>FS = 2.57 y 1.16</td></tr>
-  </table></div>
-  <div class="note"><b>Cómo leer cada ejemplo</b>Elige un ejemplo en la barra de abajo: se muestra uno a la vez. Cada paso está en una tarjeta con cuatro partes: <b>qué hacemos y por qué</b>, la <b>fórmula</b> general, la fórmula con los <b>números reemplazados</b> y el <b>resultado</b> (en verde). Si te pierdes, vuelve a la fórmula: todos los números salen de ahí.</div>
-  <p class="muted"><small>Los enunciados están resumidos y traducidos. Las figuras son esquemas redibujados: para medir a escala, usa las del libro. En todo el capítulo Budhu usa γw = 9.8 kN/m³.</small></p>
-
+  <p class="exlab">Elige un ejemplo</p>
   <div class="exnav" id="exNav" role="tablist" aria-label="Elegir ejemplo"><button class="exchip" data-go="16.1"><b>16.1</b><small>Arena (talud infinito)</small></button><button class="exchip" data-go="16.2"><b>16.2</b><small>Zanja en arcilla</small></button><button class="exchip" data-go="16.3"><b>16.3</b><small>Bishop, 3 casos</small></button><button class="exchip" data-go="16.4"><b>16.4</b><small>Bishop, 3 suelos</small></button><button class="exchip" data-go="16.5"><b>16.5</b><small>Janbu</small></button><button class="exchip" data-go="16.6"><b>16.6</b><small>Ábaco de Taylor</small></button><button class="exchip" data-go="16.7"><b>16.7</b><small>Bishop–Morgenstern</small></button><button class="exchip" data-go="16.8"><b>16.8</b><small>Lago (programa)</small></button></div>
   <div class="exb" data-ex="16.1">
   <!-- ===================== 16.1 ===================== -->
   <h2><span class="n">Ejemplo 16.1 · Talud infinito en arena</span>Arena vertida desde un camión</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>La arena que cae de un camión forma un montón. Su pendiente es el talud que se analiza.</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Talud infinito en suelo granular (seco, saturado y con flujo)</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cuál es el ángulo máximo que aguanta una arena, cómo se diseña un talud seguro con un FS dado y por qué el agua que fluye lo reduce casi a la mitad.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">30° seco, 24.8° con FS = 1.25, 30° saturado sin flujo y 14° con flujo</span></div></div>
   <div class="note"><b>Enunciado</b>Se vierte arena seca desde un camión al costado de una carretera. La arena tiene φ′cs = 30°, γ = 17 kN/m³ y γsat = 17.5 kN/m³. Halla el ángulo máximo del talud: (a) seco, (b) saturado sin flujo y (c) saturado con flujo paralelo al talud. Halla también el talud seguro en estado seco para FS = 1.25.</div>
   <div class="fig"><svg id="bF161" viewBox="0 0 600 240" role="img" aria-label="Montones de arena seca y con flujo de agua"></svg></div>
   <p class="ask">¿Qué nos piden? El ángulo αs del talud en cuatro situaciones.</p>
@@ -1665,6 +1662,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.2">
   <!-- ===================== 16.2 ===================== -->
   <h2><span class="n">Ejemplo 16.2 · Talud infinito en arcilla</span>Zanja que provocó una falla</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Zanja en una ladera de arcilla que falló al excavarla</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Talud infinito en arcilla, análisis no drenado (TSA) y retroanálisis</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo se usa una falla real (FS = 1) para despejar la resistencia del suelo, y cómo se comprueba con la profundidad de grieta.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">su ≈ 17 kPa</span></div></div>
   <div class="note"><b>Enunciado</b>En una ladera de arcilla inclinada 38° (γsat = 17.5 kN/m³) se excavó una zanja para cables. A 1.9 m de profundidad se paró el trabajo. Al retomarlo, con 2 m excavados, la parte superior de la arcilla falló de golpe y sepultó la zanja. La superficie de falla fue casi paralela a la ladera. Determina la resistencia no drenada su de la arcilla.</div>
   <div class="fig"><svg id="bF162" viewBox="0 0 600 260" role="img" aria-label="Ladera de arcilla a 38 grados con zanja y plano de falla"></svg></div>
   <p class="ask">¿Qué nos piden? La resistencia no drenada su de la arcilla.</p>
@@ -1695,6 +1693,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.3">
   <!-- ===================== 16.3 ===================== -->
   <h2><span class="n">Ejemplo 16.3 · Bishop simplificado</span>Talud homogéneo de 8 m: sin grieta, con grieta y grieta con agua</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Talud homogéneo de 8 m con círculo de falla</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Método de las dovelas, Bishop simplificado (ESA iterada y TSA)</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo se mide cada dovela, cómo se calcula mj, cómo se itera el FS y cuánto bajan el FS la grieta de tracción y el agua dentro de ella.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">ESA 1.06, 1.00 y 0.95; TSA 1.48, 1.27 y 1.22</span></div></div>
   <div class="note"><b>Enunciado</b>Talud de 8 m de altura con pendiente 1 (V) : 1.57 (H), en suelo homogéneo con γsat = 18 kN/m³, φ′cs = 33° y su = 30 kPa. El suelo sobre el nivel freático se considera saturado. Calcula FS con Bishop simplificado en tres casos: (1) sin grieta de tracción, (2) con grieta y (3) con la grieta llena de agua.</div>
   <p class="ask">¿Qué nos piden? FS en análisis drenado (ESA, largo plazo) y no drenado (TSA, corto plazo) para los tres casos.</p>
   <div class="datos"><div>Altura del talud<b>H = 8 m</b></div><div>Pendiente<b>1 V : 1.57 H</b></div><div>Peso unitario<b>γsat = 18 kN/m³</b></div><div>Fricción<b>φ′cs = 33°</b></div><div>Resistencia no drenada<b>su = 30 kPa</b></div><div>Radio del círculo<b>R = 14.3 m</b></div></div>
@@ -1791,6 +1790,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.4">
   <!-- ===================== 16.4 ===================== -->
   <h2><span class="n">Ejemplo 16.4 · Bishop con estratos</span>El mismo talud con tres suelos</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>El mismo talud, ahora con tres estratos</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Bishop simplificado con varios suelos</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo se calcula el peso de una dovela que cruza varios estratos y qué φ′ y su se usan (los del suelo de la base).</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">ESA 1.01 y TSA 1.91</span></div></div>
   <div class="note"><b>Enunciado</b>Misma geometría del ejemplo 16.3, pero con tres estratos horizontales: suelo 1 bajo el nivel del pie, suelo 2 en los 4 m inferiores del talud y suelo 3 en los 4 m superiores. Sin grieta de tracción. Determina FS.</div>
   <div class="fig"><svg id="bF164" viewBox="0 0 600 390" role="img" aria-label="Talud con tres estratos y dovelas"></svg></div>
   <div class="tw"><table><tr><th>Suelo</th><th class="num">φ′cs (°)</th><th class="num">γ (kN/m³)</th><th class="num">su (kPa)</th><th>Ubicación</th></tr>
@@ -1836,6 +1836,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.5">
   <!-- ===================== 16.5 ===================== -->
   <h2><span class="n">Ejemplo 16.5 · Janbu</span>Relleno granular sobre arcilla saturada</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Relleno granular sobre arcilla blanda</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Método de Janbu para superficies de falla no circulares</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cuándo se usa Janbu en vez de Bishop, cómo se lee el factor de corrección fo y cómo se itera con dovelas de base recta.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">FS = 1.04</span></div></div>
   <div class="note"><b>Enunciado</b>Un relleno granular de 5 m de alto se colocó sobre una arcilla saturada de 2 m de espesor. Se supone una superficie de falla no circular: baja a 45° hasta la base de la arcilla, sigue horizontal 3.5 m, sube a 45° y luego sube a 59.9° hasta la corona. El agua está por debajo de la superficie de falla. Calcula FS con un análisis en esfuerzos efectivos.</div>
   <div class="fig"><svg id="bF165" viewBox="0 0 600 300" role="img" aria-label="Relleno sobre arcilla con superficie de falla quebrada y cuatro dovelas"></svg></div>
   <div class="datos"><div>Arcilla (suelo 1)<b>γ = 18 · φ′ = 29°</b></div><div>Relleno (suelo 2)<b>γ = 17 · φ′ = 33°</b></div><div>Agua bajo la falla<b>ru = 0</b></div><div>Cuerda<b>L = 11.5 m</b></div><div>Distancia máxima<b>d = 4.5 m</b></div></div>
@@ -1882,6 +1883,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.6">
   <!-- ===================== 16.6 ===================== -->
   <h2><span class="n">Ejemplo 16.6 · Ábaco de Taylor</span>Talud de arcilla sobre arcilla muy rígida</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Talud de arcilla sobre un estrato muy rígido</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Ábaco de Taylor (análisis no drenado)</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo resolver rápido un talud homogéneo con un ábaco: calcular nd, leer No y obtener el FS sin dovelas.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">FS = 1.94</span></div></div>
   <div class="note"><b>Enunciado</b>Talud de arcilla de 8 m de altura inclinado 20°, con su = 40 kPa y γsat = 17.5 kN/m³. Debajo del pie hay 4 m de la misma arcilla y luego una arcilla muy rígida. Determina FS.</div>
   <div class="fig"><svg id="bF166" viewBox="0 0 600 250" role="img" aria-label="Talud de 20 grados sobre estrato rígido"></svg></div>
   <div class="datos"><div>Altura<b>Ho = 8 m</b></div><div>Hasta el estrato rígido<b>Do = 4 m</b></div><div>Inclinación<b>αs = 20°</b></div><div>Resistencia<b>su = 40 kPa</b></div><div>Peso unitario<b>γsat = 17.5 kN/m³</b></div></div>
@@ -1908,6 +1910,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.7">
   <!-- ===================== 16.7 ===================== -->
   <h2><span class="n">Ejemplo 16.7 · Bishop–Morgenstern</span>Talud 3:1 con presión de poros</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Talud 3:1 con presión de poros</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Ábacos de Bishop–Morgenstern (análisis drenado)</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo leer m y n en los ábacos y cuánto FS le quita el agua al talud (el término n·ru).</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">FS = 1.06</span></div></div>
   <div class="note"><b>Enunciado</b>Talud homogéneo con pendiente 3 (H) : 1 (V), φ′cs = 30°, γsat = 18 kN/m³ y ru = 0.35. Determina FS.</div>
   <div class="fig"><svg id="bF167" viewBox="0 0 600 200" role="img" aria-label="Talud 3 a 1"></svg></div>
   <div class="datos"><div>Pendiente<b>3 H : 1 V</b></div><div>Fricción<b>φ′cs = 30°</b></div><div>Presión de poros<b>ru = 0.35</b></div></div>
@@ -1930,6 +1933,7 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <div class="exb" data-ex="16.8">
   <!-- ===================== 16.8 ===================== -->
   <h2><span class="n">Ejemplo 16.8 · Caso práctico</span>Talud de un lago con nivel variable</h2>
+  <div class="exintro"><div class="ei-row"><span class="ei-k">De qué trata</span><span>Talud de un lago cuyo nivel de agua varía</span></div><div class="ei-row"><span class="ei-k">Método</span><span>Programa de computadora (Bishop), desembalse rápido y gradual</span></div><div class="ei-row"><span class="ei-k">Qué vas a aprender</span><span>Cómo se plantean los escenarios de corto y largo plazo en un caso real y cuál de los dos controla el diseño.</span></div><div class="ei-row"><span class="ei-k">Resultado</span><span class="ei-res">FS = 2.57 (rápido) y 1.16 (gradual)</span></div></div>
   <div class="note"><b>Enunciado</b>En una urbanización se excavará un lago para drenaje y recreación. Según el clima y el drenaje de la zona, el nivel del agua puede variar 2 m. Se propone un talud 1 (V) : 1.5 (H). El perfil tiene tres arcillas: arcilla media arriba (γ = 17.9 / γsat = 18.4 kN/m³, su = 48 kPa, φ′cs = 30°), arcilla limosa media en medio (γsat = 17.8 kN/m³, su = 32 kPa, φ′cs = 26°) y arcilla gris rígida abajo (γsat = 18.2 kN/m³, su = 68 kPa, φ′cs = 28°). Evalúa la estabilidad.</div>
 
   <div class="strat"><div class="sh">Estrategia</div><p class="sb"><b>Lo que dice el libro:</b> Lo mejor es usar un programa de estabilidad de taludes. El libro usa STB2006 (Bishop, criterio c–φ). El caso más desfavorable es un desembalse rápido hasta el fondo del lago; aquí se supone que el lago se mantiene en su nivel mínimo.</p><p><b>Plan de solución:</b></p><ol><li>Definir los dos escenarios: desembalse rápido (corto plazo, su) y desembalse gradual (largo plazo, φ′cs).</li><li>Ingresar los nudos de cada estrato y del nivel freático, y los parámetros de cada suelo.</li><li>Definir la zona de búsqueda de centros y la profundidad de los círculos; probar varias zonas.</li><li>Tomar el FS mínimo de cada escenario y compararlo con el FS exigido.</li></ol></div>
@@ -1950,6 +1954,10 @@ details.sl .zero{padding:6px 10px;border-radius:8px;background:var(--warn-soft,v
   <p class="muted"><small>Este ejemplo no se puede rehacer a mano, porque el resultado depende de la búsqueda del círculo crítico que hace el programa. La pestaña <a href="#taludes">Estabilidad de taludes</a> tiene un buscador de círculo crítico para practicar la misma idea.</small></p>
   <div class="exfoot"><button class="exbtn" data-go="16.7"><span>‹ Ejemplo anterior</span>16.7 · Bishop–Morgenstern</button></div>
   </div>
+
+    <h3>Cómo leer estos ejemplos</h3>
+  <div class="note"><b>Cómo leer cada ejemplo</b>Cada paso está en una tarjeta con cuatro partes: <b>qué hacemos y por qué</b>, la <b>fórmula</b> general, la fórmula con los <b>números reemplazados</b> y el <b>resultado</b> (en verde). Si te pierdes, vuelve a la fórmula: todos los números salen de ahí.</div>
+  <p class="muted"><small>Los enunciados están resumidos y traducidos. Las figuras son esquemas redibujados: para medir a escala, usa las del libro. En todo el capítulo Budhu usa γw = 9.8 kN/m³.</small></p>
 
   </section>
 
